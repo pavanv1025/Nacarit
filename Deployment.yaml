@@ -1,0 +1,20 @@
+apiVersion : v2
+kind       : Deployment 
+metadata  :
+   name   : Deployment
+Spec:
+  Replica:5
+  Selector:
+     matchLabels:
+        App:app-name 
+     Template:
+         Metadata:
+            Labels:
+              App:app-name 
+         Spec:
+            Containers:
+              -name:container_name
+                Image:image_name 
+             Ports:
+               -containerPort : 80
+               -containerPort : 8080
